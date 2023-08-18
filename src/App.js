@@ -64,20 +64,21 @@ function App() {
 
   return (
     <div className="App">
-      <div class="container">
-    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+      <div class="container fixed-top">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom" id="navbar">
       <div class="col-md-3 mb-2 mb-md-0">
         <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
-          <img alt="logo"/>
+          <img id="logo" src={require('./images/logo.png')} alt="logo"/>
         </a>
       </div>
 
-      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 hidden-xs">
         <li><a href="#community" class="nav-link px-2">Community</a></li>
         <li><a href="#howtobuy" class="nav-link px-2">How To Buy</a></li>
         <li><a href="#tokenomics" class="nav-link px-2">Tokenomics</a></li>
         <li><a href="#airdrop" class="nav-link px-2">Airdrop</a></li>
         <li><a href="#roadmap" class="nav-link px-2">Roadmap</a></li>
+        <li><a href="" target="_blank" class="nav-link px-2">Contract</a></li>
       </ul>
 
       <div class="col-md-3 text-end">
@@ -88,7 +89,7 @@ function App() {
 
 
   <div class="px-4 py-5 my-5 text-center">
-    <img class="d-block mx-auto mb-4" src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"/>
+    <img id="header" class="d-block mx-auto mb-4" src={require('./images/header.jpg')} alt="Win with $PEPEW"/>
     <h1 id="presale" class="display-5 fw-bold text-body-emphasis">PEPE WIN TOKEN - The Next 1000x Gem 💎 with Utility</h1>
     <div class="col-lg-6 mx-auto">
       <p class="lead mb-4">Pepe is taking over the crypto world by storm. Why not win with $PEPEW token's revolutionary daily lottery utility. A lucky winner is picked daily where the prize pot is airdropped to. The higher the transaction volume, the higher the prize pot!</p>
@@ -109,11 +110,18 @@ function App() {
   <div id="community" class="container col-xxl-8 px-4 py-5">
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
       <div class="col-10 col-sm-8 col-lg-6">
-        <img src="bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy"/>
+        <img src={require('./images/pepe1.png')} class="d-block mx-lg-auto img-fluid" alt="PEPEW" width="700" height="500" loading="lazy"/>
       </div>
       <div class="col-lg-6">
-        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">$PEPEW Token</h1>
-        <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world's most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">🐸 Introducing PepeWin $PEPEW 🐸</h1>
+        <p class="lead">Are you ready to dive into the exciting world of memecoins and join a community that combines fun, excitement, and financial potential? Look no further than PepeWin ($PEPEW), the hottest new memecoin on Binance Smart Chain that's taking the crypto scene by storm!
+<br/>
+<b>🎉 Embrace the Power of Memes:</b><br/>
+PepeWin is not just another memecoin - it's a movement. Inspired by the internet's favorite frog, Pepe, this vibrant and dynamic token has captured the essence of viral internet culture.
+<br/>
+<b>🏆 Daily Lottery Draw:</b><br/>
+What sets PepeWin apart from the rest is its innovative lottery utility. Every day, one lucky winner is randomly selected from the PepeWin community, and they receive an astonishing 3% of every transaction made on the platform. Imagine the thrill of waking up to the news that you've won a share of the daily earnings - it's like hitting the jackpot, but with a memecoin twist!
+</p>
       </div>
     </div>
   </div>
@@ -152,7 +160,7 @@ function App() {
   <div id="tokenomics" class="container col-xxl-8 px-4 py-5">
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
       <div class="col-10 col-sm-8 col-lg-6">
-        <img src="bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy"/>
+        <img src={require('./images/tokenomics.png')} class="d-block mx-lg-auto img-fluid" alt="PEPEW Tokenomics" width="700" height="500" loading="lazy"/>
       </div>
       <div class="col-lg-6">
         <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Tokenomics</h1>
@@ -175,11 +183,14 @@ function App() {
   <div id="airdrop" class="container col-xxl-8 px-4 py-5">
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
       <div class="col-10 col-sm-8 col-lg-6">
-        <img src="bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy"/>
+        <img src={require('./images/airdrop.png')} class="d-block mx-lg-auto img-fluid" alt="PEPEW Airdrop" width="700" height="500" loading="lazy"/>
       </div>
       <div class="col-lg-6">
         <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Airdrop</h1>
-        <p class="lead">Join the airdrop where we will select 100 lucky winners to airdrop 10,000 $PEPEW tokens!</p>
+        <p class="lead"><a href="" target="_blank">Join the airdrop</a> where we will select 100 lucky winners to airdrop 10,000 $PEPEW tokens!</p>
+        <p class="lead"><b>💰 Earn While You HODL:</b><br/>
+Investors in PepeWin are registered to a pool of wallet addresses and a random wallet address is picked daily where 3% of transaction fees are sent to. Investors that sold can't enter the lottery!
+</p>
       </div>
     </div>
   </div>
@@ -188,11 +199,75 @@ function App() {
   <div id="roadmap" class="container col-xxl-8 px-4 py-5">
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
       <div class="col-10 col-sm-8 col-lg-6">
-        <img src="bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy"/>
+        <img src={require('./images/joinus.png')} class="d-block mx-lg-auto img-fluid" alt="PEPEW" width="700" height="500" loading="lazy"/>
       </div>
       <div class="col-lg-6">
         <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Roadmap & Whitepaper</h1>
-        <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world's most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+        <p class="lead"></p>
+        <a href="./whitepaper.pdf" target="_blank"><p class="lead">Access the $PEPEW Whitepaper here.</p></a>
+        <p class="lead"><b>🤝 Join the PepeWin Community:</b><br/>
+Investing in PepeWin means more than just buying tokens - it means becoming part of a thriving and passionate community. Connect with fellow meme enthusiasts, share in the excitement of daily lottery draws, and contribute to the growth of PepeWin as it takes its place in the crypto landscape</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3 blue">
+              <h4 class="my-0 fw-normal">Phase 1 - FOUNDATION</h4>
+            </div>
+            <div class="card-body">
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>👨‍💻 Smart Contract Development</li>
+                <li>🌐 Social Media Account Creation (Telegram, Twitter, Discord) and Community Building</li>
+                <li>🪙 Launch Presale</li>
+                <li>🤣 Memes</li>
+              </ul>
+              <a href="#presale"><button type="button" class="w-100 btn btn-lg btn-outline-primary">Join Presale Now</button></a>
+            </div>
+          </div>
+      </div>
+      <div class="col">
+      <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3 blue">
+            <h4 class="my-0 fw-normal">Phase 2 - LAUNCH</h4>
+          </div>
+          <div class="card-body">
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>🚀 Token Launch on Pancakeswap</li>
+              <li>🤝 Partnerships With Influencers and Marketing Campaigns</li>
+              <li>💎 Listing on ICO Directories (CoinMarketCap, CoinGecko and more)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+      <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3 blue">
+            <h4 class="my-0 fw-normal">Phase 3 - MAINSTREAM</h4>
+          </div>
+          <div class="card-body">
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>💥 Listing on popular CEXs</li>
+              <li>🐸 $PEPEW NFT Collection</li>
+              <li>🏆 Creation of Meme Labs - a collection of memecoins with revolutionary utilities!</li>
+              <li>🤣 More Memes</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><br/>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <img class="image" src={require('./images/pumpit.png')}/>
+      </div>
+      <div class="col">
+        <img class="image" src={require('./images/stocks.png')}/>
       </div>
     </div>
   </div>
@@ -202,15 +277,16 @@ function App() {
   <footer class="py-5">
     <div class="row">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Community</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">How To Buy</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Tokenomics</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Airdrop</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Roadmap</a></li>
+          <li class="nav-item"><a href="#community" class="nav-link px-2 text-body-secondary">Community</a></li>
+          <li class="nav-item"><a href="#howtobuy" class="nav-link px-2 text-body-secondary">How To Buy</a></li>
+          <li class="nav-item"><a href="#tokenomics" class="nav-link px-2 text-body-secondary">Tokenomics</a></li>
+          <li class="nav-item"><a href="#airdrop" class="nav-link px-2 text-body-secondary">Airdrop</a></li>
+          <li class="nav-item"><a href="#roadmap" class="nav-link px-2 text-body-secondary">Roadmap</a></li>
+          <li class="nav-item"><a href="" target="_blank" class="nav-link px-2 text-body-secondary">Contract</a></li>
       </ul>
     </div>
 
-    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4">
+    <div class="d-flex flex-column flex-sm-row justify-content-between">
       <p>Cryptocurrency may be unregulated in your jurisdiction. The value of cryptocurrencies may go down as well as up. Profits may be subject to capital gains or other taxes applicable in your jurisdiction.</p>
       <ul class="list-unstyled d-flex">
         <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use></use></svg></a></li>
