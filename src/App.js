@@ -57,6 +57,7 @@ function App() {
 		setContract(tempContract);	
 	}
 
+  //run transactions on the smart contract
   async function presaleBuyFromContract() {
     let bnbAmount = document.getElementById("bnbAmount").value;
     contract.presaleBuy({value: ethers.parseEther(bnbAmount)});
@@ -73,10 +74,10 @@ function App() {
       </div>
 
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 hidden-xs">
-        <li><a href="#community" class="nav-link px-2">Features</a></li>
-        <li><a href="#howtobuy" class="nav-link px-2">About</a></li>
-        <li><a href="#tokenomics" class="nav-link px-2">Blog</a></li>
-        <li><a href="" target="_blank" class="nav-link px-2">Contract</a></li>
+        <li><a href="#features" class="nav-link px-2">Features</a></li>
+        <li><a href="/about" class="nav-link px-2">About</a></li>
+        <li><a href="/blog" class="nav-link px-2">Blog</a></li>
+        <li><a href="https://coston2-explorer.flare.network/address/0x3f77711B8d343c6D394CDa7Cb16E3D976129Dc21/transactions" target="_blank" class="nav-link px-2">Contract</a></li>
       </ul>
 
       <div class="col-md-3 text-end">
@@ -87,68 +88,43 @@ function App() {
 
 
   <div class="px-4 py-5 my-5 text-center">
-    <h1 id="presale" class="display-5 fw-bold text-body-emphasis">PEPE WIN TOKEN - The Next 1000x Gem 💎 with Utility</h1>
+    <h1 id="presale" class="display-5 fw-bold text-body-emphasis">NFTreon: A Crypto-Based Social Platform</h1>
     <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4">Pepe is taking over the crypto world by storm. Why not win with $PEPEW token's revolutionary daily lottery utility. A lucky winner is picked daily where the prize pot is airdropped to. The higher the transaction volume, the higher the prize pot!</p>
-      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-
-        <div class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
-          <h3>Wallet Address: {walletAddress}</h3>
-          <p>1 BNB = 10,000,000 $PEPEW</p>
-          <input step="any" type="number" id="bnbAmount" placeholder="Amount of BNB..."/>
-          <button class="w-100 btn btn-lg btn-outline-secondary" onClick={requestAccount}>Connect Wallet</button>
-          <button class="w-100 btn btn-lg btn-primary" onClick={presaleBuyFromContract}>Presale Buy</button>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <div id="community" class="container col-xxl-8 px-4 py-5">
-    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-      <div class="col-10 col-sm-8 col-lg-6">
-        
-      </div>
-      <div class="col-lg-6">
-        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">🐸 Introducing PepeWin $PEPEW 🐸</h1>
-        <p class="lead">Are you ready to dive into the exciting world of memecoins and join a community that combines fun, excitement, and financial potential? Look no further than PepeWin ($PEPEW), the hottest new memecoin on Binance Smart Chain that's taking the crypto scene by storm!
-<br/>
-<b>🎉 Embrace the Power of Memes:</b><br/>
-PepeWin is not just another memecoin - it's a movement. Inspired by the internet's favorite frog, Pepe, this vibrant and dynamic token has captured the essence of viral internet culture.
-<br/>
-<b>🏆 Daily Lottery Draw:</b><br/>
-What sets PepeWin apart from the rest is its innovative lottery utility. Every day, one lucky winner is randomly selected from the PepeWin community, and they receive an astonishing 3% of every transaction made on the platform. Imagine the thrill of waking up to the news that you've won a share of the daily earnings - it's like hitting the jackpot, but with a memecoin twist!
-</p>
-      </div>
+      <p class="lead mb-4">NFTreon is a social media platform where users purchase membership to gain access to exclusive content via NFTs on the Flare blockchain.</p>
     </div>
   </div>
 
   <div class="container px-4 py-5" id="howtobuy">
-    <h2 class="pb-2 border-bottom">How To Buy</h2>
+    <h2 class="pb-2 border-bottom">what Is NFTreon?</h2>
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
       <div class="feature col">
-        <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-          
-        </div>
-        <h3 class="fs-2 text-body-emphasis">Connect Your Wallet</h3>
-        <p>Connect your wallet on the presale section at the top of our website. Make sure you're on BSC mainnet.</p>
+        <h3 class="fs-2 text-body-emphasis">Exclusive Content to NFT Holders</h3>
+        <p>Not only having access to content, content creators could offer exclusive benefits to their NFT holders and attract more audiences.</p>
       </div>
       <div class="feature col">
-        <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-          
-        </div>
-        <h3 class="fs-2 text-body-emphasis">Enter the amount of BNB</h3>
-        <p>Enter the amount of BNB you will spend to buy $PEPEW tokens.</p>
+        <h3 class="fs-2 text-body-emphasis">Incentive Environment</h3>
+        <p>Popularity of a creator depends on the value of their NFT. The better contents you create, the higher your NFT value gets as more users are willing to buy your NFT.</p>
       </div>
       <div class="feature col">
-        <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-          
-        </div>
-        <h3 class="fs-2 text-body-emphasis">Buy Tokens On Presale</h3>
-        <p>Click the Presale Buy button which will prompt Metamask to execute the transaction and your tokens will be transferred to you at a discounted price!</p>
-        <a href="#presale" class="icon-link">
-          Join Presale Now!
-        </a>
+        <h3 class="fs-2 text-body-emphasis">Diverse Functions</h3>
+        <p>NFTreon could can act as an investment platform where users can buy or sell NFTs to earn flares or a community for fans to support creators by purchasing their NFTs.</p>
+
+      </div>
+    </div>
+
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div class="feature col">
+        <h3 class="fs-2 text-body-emphasis">Exclusive Content to NFT Holders</h3>
+        <p>Not only having access to content, content creators could offer exclusive benefits to their NFT holders and attract more audiences.</p>
+      </div>
+      <div class="feature col">
+        <h3 class="fs-2 text-body-emphasis">Incentive Environment</h3>
+        <p>Popularity of a creator depends on the value of their NFT. The better contents you create, the higher your NFT value gets as more users are willing to buy your NFT.</p>
+      </div>
+      <div class="feature col">
+        <h3 class="fs-2 text-body-emphasis">Diverse Functions</h3>
+        <p>NFTreon could can act as an investment platform where users can buy or sell NFTs to earn flares or a community for fans to support creators by purchasing their NFTs.</p>
+
       </div>
     </div>
   </div>
