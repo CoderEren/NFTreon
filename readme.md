@@ -19,8 +19,8 @@ In a world where the boundaries of entertainment, blockchain technology, and dig
 - `npm start`
 
 ### Overview
-   - **Description**: This function is run when the user connects their wallet for the first time. It sets their username, number of NFTs they want to offer, and at which price. It has security checks, such as checking if the username already exists, and checks if the user is creating more than one profile. In these cases, the transaction will be reverted. 
-   - **Technical**: 
+- **Description**: This function is run when the user connects their wallet for the first time. It sets their username, number of NFTs they want to offer, and at which price. It has security checks, such as checking if the username already exists, and checks if the user is creating more than one profile. In these cases, the transaction will be reverted. 
+- **Technical**: 
 ```solidity	 
 function setProfile(string memory username, uint256 noOfMembers, uint256 _floorPrice) public {
 	require(checkUsernameExists(username) == false, "This username already exists!");
@@ -33,9 +33,8 @@ function setProfile(string memory username, uint256 noOfMembers, uint256 _floorP
 	creator.noOfHolders = 0;
 }
 ```
-  - **Description**: This function checks if the user holds the NFT of the creator. If the function returns true, then the content of the creator will be displayed on the website. 
-	- **Technical**: 
-
+- **Description**: This function checks if the user holds the NFT of the creator. If the function returns true, then the content of the creator will be displayed on the website.
+- - **Technical**: 
 ```solidity
 function checkIfHoldingNFT(string memory username) public view returns(bool) {
 	Creator storage creator = walletToCreator[usernameToWallet[username]];
@@ -46,9 +45,8 @@ function checkIfHoldingNFT(string memory username) public view returns(bool) {
 	}
 }
 ```
-	- **Description**: This function lets the user purchase an NFT from the creator at the floor price. It has security checks in place, such as checking whether or not the user already owns an NFT, checking if the amount paid is equal to the floor price, and checking if all NFTs are sold out. 
-	- **Technical**: 
-
+- **Description**: This function lets the user purchase an NFT from the creator at the floor price. It has security checks in place, such as checking whether or not the user already owns an NFT, checking if the amount paid is equal to the floor price, and checking if all NFTs are sold out. 
+- **Technical**: 
 ```solidity
 function buyNFTForFloorPrice(string memory username) public payable {
 	require(checkIfHoldingNFT(username) == false, "You already own an NFT of this creator!");
@@ -66,8 +64,8 @@ function buyNFTForFloorPrice(string memory username) public payable {
 	creator.holdingNFT[msg.sender] = true;
 }
 ```
-	- **Description**: This function lets the user buy an NFT from another user that had offered their NFT for sale. For each sale of an NFT, the platform will earn a 5% commission, the creator will earn a 10% commission, and the seller earns the rest. After security checks, the ownership of the NFT will be changed from the seller to the buyer. 
-	- **Technical**: 
+- **Description**: This function lets the user buy an NFT from another user that had offered their NFT for sale. For each sale of an NFT, the platform will earn a 5% commission, the creator will earn a 10% commission, and the seller earns the rest. After security checks, the ownership of the NFT will be changed from the seller to the buyer. 
+- **Technical**: 
 ```solidity
 function buyNFTFromAnotherUser(string memory username, address seller) public payable {
 	require(checkIfHoldingNFT(username) == false, "You already own an NFT of this creator!");
@@ -94,8 +92,8 @@ function buyNFTFromAnotherUser(string memory username, address seller) public pa
 	}
 }
 ```
-	- **Description**: This function lets a user offer their NFT for sale at a price that they determine. There is a security check in place to make sure that the user must own an NFT of that creator. It also adds users who want to sell their NFTs to an array named sellers, such that all sellers and the their asking price will be displayed on the website. 
-	- **Technical**: 
+- **Description**: This function lets a user offer their NFT for sale at a price that they determine. There is a security check in place to make sure that the user must own an NFT of that creator. It also adds users who want to sell their NFTs to an array named sellers, such that all sellers and the their asking price will be displayed on the website. 
+- **Technical**: 
 ```solidity
 function offerNFTForSale(string memory username, uint256 price) public {
 	require(checkIfHoldingNFT(username) == true, "You must own an NFT of the creator first!");
@@ -105,8 +103,11 @@ function offerNFTForSale(string memory username, uint256 price) public {
 }
 ```
 ### Images of the Demo
+Homepage
 ![](src/images/homepage.png)
+Creator's Profile displaying details about the creator such as number of NFTs they offer, floor price of each NFT and number of NFT holders.
 ![](src/images/creator-profile.png)
+If the user holds an NFT of the creator, they gain access to their content which could be text, link or images.
 ![](src/images/creator-profile-nft.png)
 
     
