@@ -35,7 +35,7 @@ function setProfile(string memory username, uint256 noOfMembers, uint256 _floorP
 }
 ```
 - **Description**: This function checks if the user holds the NFT of the creator. If the function returns true, then the content of the creator will be displayed on the website.
-- - **Technical**: 
+- **Technical**: 
 ```solidity
 function checkIfHoldingNFT(string memory username) public view returns(bool) {
 	Creator storage creator = walletToCreator[usernameToWallet[username]];
