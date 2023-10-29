@@ -8,7 +8,8 @@ In a world where the boundaries of entertainment, blockchain technology, and dig
 ## Table of Contents  
 - [Getting Started](#getting-started) 
 	- [Installation](#installation) 
-	- [Overview](#overview) 
+	- [Overview](#overview)
+	- [Images of the Demo](#Images-of-the-Demo)
 - [Contributors](#contributors) 
 
 ## Getting Started  
