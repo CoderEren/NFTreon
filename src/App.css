@@ -12,6 +12,11 @@
   pointer-events: none;
 }
 
+#listOfSellers {
+  max-width: 700px;
+  margin: auto;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
