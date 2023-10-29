@@ -21,19 +21,18 @@ In a world where the boundaries of entertainment, blockchain technology, and dig
 ### Overview
    - **Description**: This function is run when the user connects their wallet for the first time. It sets their username, number of NFTs they want to offer, and at which price. It has security checks, such as checking if the username already exists, and checks if the user is creating more than one profile. In these cases, the transaction will be reverted. 
    - **Technical**: 
-		 
-			 ```solidity
-			function setProfile(string memory username, uint256 noOfMembers, uint256 _floorPrice) public {
-		        require(checkUsernameExists(username) == false, "This username already exists!");
-		        require(walletToCreator[msg.sender].noOfNFTs == 0, "You can't create multiple profiles!");
-		        usernameToWallet[username] = msg.sender;
-		        noOfCreators += 1;
-		        Creator storage creator = walletToCreator[msg.sender];
-		        creator.noOfNFTs = noOfMembers;
-		        creator.floorPrice = _floorPrice;
-		        creator.noOfHolders = 0;
-		    }
-			```
+```solidity	 
+function setProfile(string memory username, uint256 noOfMembers, uint256 _floorPrice) public {
+	require(checkUsernameExists(username) == false, "This username already exists!");
+	require(walletToCreator[msg.sender].noOfNFTs == 0, "You can't create multiple profiles!");
+	usernameToWallet[username] = msg.sender;
+	noOfCreators += 1;
+	Creator storage creator = walletToCreator[msg.sender];
+	creator.noOfNFTs = noOfMembers;
+	creator.floorPrice = _floorPrice;
+	creator.noOfHolders = 0;
+}
+```
   - **Description**: This function checks if the user holds the NFT of the creator. If the function returns true, then the content of the creator will be displayed on the website. 
 	- **Technical**: 
 
