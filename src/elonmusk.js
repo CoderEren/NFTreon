@@ -327,7 +327,7 @@ const ElonMusk = () => {
           <div class="col">
             <div class="card mb-4 rounded-3 shadow-sm">
                 <div class="card-header py-3 blue">
-                  <h4 class="my-0 fw-normal">Cover Letter Template</h4>
+                  <a href="https://google.com"><h4 class="my-0 fw-normal"><b>Cover Letter Template</b></h4></a>
                 </div>
                 <div class="card-body">
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas condimentum porttitor ante, sit amet pretium velit pharetra bibendum. In tristique libero vel sem tristique ornare.</p>
@@ -338,7 +338,7 @@ const ElonMusk = () => {
           <div class="col">
           <div class="card mb-4 rounded-3 shadow-sm">
               <div class="card-header py-3 blue">
-                <h4 class="my-0 fw-normal">Exclusive SpaceX Internship</h4>
+              <a href="https://google.com"><h4 class="my-0 fw-normal"><b>Exclusive SpaceX Internship</b></h4></a>
               </div>
               <div class="card-body">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas condimentum porttitor ante, sit amet pretium velit pharetra bibendum. In tristique libero vel sem tristique ornare.</p>
@@ -348,7 +348,7 @@ const ElonMusk = () => {
           <div class="col">
           <div class="card mb-4 rounded-3 shadow-sm">
               <div class="card-header py-3 blue">
-                <h4 class="my-0 fw-normal">Access Tesla Blueprints</h4>
+              <a href="https://google.com"><h4 class="my-0 fw-normal"><b>Access Tesla Blueprints</b></h4></a>
               </div>
               <div class="card-body">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas condimentum porttitor ante, sit amet pretium velit pharetra bibendum. In tristique libero vel sem tristique ornare.</p>
